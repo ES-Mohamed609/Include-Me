@@ -1,0 +1,297 @@
+/**
+ * FINAL COMPLETE FIX - All Issues Resolved
+ * This file fixes everything: sidebar, buttons, layout
+ */
+
+/* ========================================
+   RESET AND BASE FIXES
+   ======================================== */
+
+/* Ensure body and html are properly set */
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Header fixes */
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 60px !important;
+    background: white !important;
+    border-bottom: 1px solid #E1E8ED !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 1.5rem !important;
+    z-index: 1000 !important;
+}
+
+.header-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+.header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+/* Logo */
+.logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+.logo-img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+}
+
+.logo-text {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #DC143C !important;
+}
+
+/* ========================================
+   SIDEBAR - COMPLETE FIX
+   ======================================== */
+
+.sidebar {
+    position: fixed !important;
+    top: 60px !important;
+    width: 260px !important;
+    height: calc(100vh - 60px) !important;
+    background: #F8F9FA !important;
+    border-right: 1px solid #E1E8ED !important;
+    padding: 1.5rem !important;
+    overflow-y: auto !important;
+    z-index: 100 !important;
+    transition: left 0.3s ease !important;
+}
+
+/* Desktop - sidebar visible */
+@media (min-width: 769px) {
+    .sidebar {
+        left: 0 !important;
+    }
+
+    .content {
+        margin-left: 260px !important;
+        margin-top: 60px !important;
+    }
+
+    .menu-btn {
+        display: none !important;
+    }
+}
+
+/* Mobile - sidebar hidden, toggleable */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -280px !important;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .sidebar.mobile-open {
+        left: 0 !important;
+    }
+
+    .content {
+        margin-left: 0 !important;
+        margin-top: 60px !important;
+        width: 100% !important;
+    }
+
+    .menu-btn {
+        display: flex !important;
+    }
+}
+
+/* ========================================
+   MENU BUTTON
+   ======================================== */
+
+.menu-btn {
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    width: 30px !important;
+    height: 25px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    pointer-events: auto !important;
+}
+
+.menu-btn span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: #DC143C !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.menu-btn[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px) !important;
+}
+
+.menu-btn[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.menu-btn[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px) !important;
+}
+
+/* ========================================
+   OVERLAY
+   ======================================== */
+
+.sidebar-overlay {
+    position: fixed !important;
+    top: 60px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 99 !important;
+    display: none !important;
+}
+
+.sidebar-overlay.active {
+    display: block !important;
+}
+
+/* ========================================
+   CONTENT AREA
+   ======================================== */
+
+.content {
+    position: relative !important;
+    min-height: calc(100vh - 60px) !important;
+    padding: 2rem !important;
+    background: white !important;
+}
+
+/* ========================================
+   NAVIGATION ITEMS
+   ======================================== */
+
+.sidebar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+}
+
+.nav-section-title {
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    color: #95A5A6 !important;
+    margin-bottom: 1rem !important;
+}
+
+.nav-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 0.75rem 1rem !important;
+    color: #5A6C7D !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.nav-item:hover {
+    background: #E1E8ED !important;
+    color: #DC143C !important;
+    transform: translateX(5px) !important;
+}
+
+.nav-item.active {
+    background: linear-gradient(135deg, #DC143C 0%, #FF4757 100%) !important;
+    color: white !important;
+}
+
+/* ========================================
+   BUTTONS - ENSURE THEY WORK
+   ======================================== */
+
+button,
+.btn-primary,
+.btn-secondary,
+.icon-btn {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* ========================================
+   USER MENU
+   ======================================== */
+
+.user-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.user-avatar {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+}
+
+.user-name {
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    color: #2C3E50 !important;
+}
+
+/* ========================================
+   NOTIFICATION BUTTON
+   ======================================== */
+
+.icon-btn {
+    position: relative !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+}
+
+.icon-btn:hover {
+    background: #F8F9FA !important;
+}
+
+.notification-badge {
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+    background: #DC143C !important;
+    color: white !important;
+    font-size: 0.625rem !important;
+    font-weight: 600 !important;
+    padding: 2px 5px !important;
+    border-radius: 10px !important;
+    min-width: 16px !important;
+    text-align: center !important;
+}

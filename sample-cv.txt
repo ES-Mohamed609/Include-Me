@@ -1,0 +1,61 @@
+JOHN SMITH
+Senior Software Engineer
+
+Email: john.smith@email.com
+Phone: +1 (555) 123-4567
+Location: San Francisco, CA
+LinkedIn: linkedin.com/in/johnsmith
+
+PROFESSIONAL SUMMARY
+Experienced software engineer with 7+ years of expertise in full-stack development, cloud architecture, and team leadership. Proven track record of delivering scalable applications and leading cross-functional teams. Passionate about emerging technologies and best practices in software development.
+
+WORK EXPERIENCE
+
+Senior Software Engineer | Tech Innovations Inc.
+San Francisco, CA | January 2020 - Present
+• Led development of microservices architecture serving 2M+ users using Node.js and AWS
+• Implemented CI/CD pipelines reducing deployment time by 60%
+• Mentored team of 5 junior developers and conducted code reviews
+• Technologies: JavaScript, React, Node.js, Docker, Kubernetes, AWS, PostgreSQL
+
+Software Engineer | Digital Solutions Corp
+New York, NY | June 2017 - December 2019
+• Developed and maintained customer-facing web applications using React and Python
+• Collaborated with product team to define technical requirements
+• Optimized database queries improving application performance by 40%
+• Technologies: Python, Django, React, MySQL, Git
+
+Junior Developer | StartUp Ventures
+Boston, MA | July 2015 - May 2017
+• Built responsive web interfaces and REST APIs
+• Participated in agile development processes and sprint planning
+• Contributed to open-source projects and internal tools
+• Technologies: JavaScript, HTML, CSS, Node.js, MongoDB
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+Massachusetts Institute of Technology | 2011 - 2015
+GPA: 3.8/4.0
+Relevant Coursework: Data Structures, Algorithms, Database Systems, Software Engineering
+
+TECHNICAL SKILLS
+
+Programming Languages: JavaScript, Python, Java, TypeScript, SQL
+Frontend: React, Angular, Vue.js, HTML5, CSS3
+Backend: Node.js, Express, Django, Flask, Spring Boot
+Databases: PostgreSQL, MySQL, MongoDB, Redis
+Cloud & DevOps: AWS, Azure, Docker, Kubernetes, Jenkins, Git
+Methodologies: Agile, Scrum, Test-Driven Development
+
+SOFT SKILLS
+Leadership, Communication, Problem Solving, Teamwork, Project Management, Critical Thinking
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect - Associate (2022)
+• Certified Scrum Master (CSM) (2021)
+
+PROJECTS
+• E-commerce Platform: Built scalable platform handling 100K+ daily transactions
+• Real-time Analytics Dashboard: Created data visualization tool using React and D3.js
+• Open Source Contributor: Active contributor to popular JavaScript libraries

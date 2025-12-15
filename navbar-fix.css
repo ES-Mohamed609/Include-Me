@@ -1,0 +1,331 @@
+/**
+ * COMPLETE NAVBAR & HEADER FIX
+ * Fixes hamburger button, icons alignment, and overall navbar layout
+ */
+
+/* ========================================
+   HEADER - COMPLETE RESET & FIX
+   ======================================== */
+
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 60px !important;
+    background: white !important;
+    border-bottom: 1px solid #E1E8ED !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 1.5rem !important;
+    z-index: 1000 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.header-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    flex: 0 0 auto !important;
+}
+
+.header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    flex: 0 0 auto !important;
+}
+
+/* ========================================
+   LOGO - PERFECT ALIGNMENT
+   ======================================== */
+
+.logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    cursor: pointer !important;
+}
+
+.logo-img {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    object-fit: cover !important;
+}
+
+.logo-text {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #DC143C !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* ========================================
+   HAMBURGER MENU BUTTON - IMPROVED
+   ======================================== */
+
+.menu-btn {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    width: 32px !important;
+    height: 28px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 4px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+}
+
+.menu-btn:hover {
+    background: #F8F9FA !important;
+}
+
+.menu-btn:active {
+    background: #E1E8ED !important;
+}
+
+.menu-btn span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background: #DC143C !important;
+    border-radius: 10px !important;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    transform-origin: center !important;
+}
+
+/* Hamburger Animation - Smooth */
+.menu-btn[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px) !important;
+}
+
+.menu-btn[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0 !important;
+    transform: scale(0) !important;
+}
+
+.menu-btn[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px) !important;
+}
+
+/* Desktop - hide hamburger */
+@media (min-width: 769px) {
+    .menu-btn {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   ICON BUTTONS - IMPROVED DESIGN
+   ======================================== */
+
+.icon-btn {
+    position: relative !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    color: #5A6C7D !important;
+}
+
+.icon-btn:hover {
+    background: #F8F9FA !important;
+    color: #DC143C !important;
+    transform: translateY(-1px) !important;
+}
+
+.icon-btn:active {
+    background: #E1E8ED !important;
+    transform: translateY(0) !important;
+}
+
+.icon-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* ========================================
+   NOTIFICATION BADGE - IMPROVED
+   ======================================== */
+
+.notification-badge {
+    position: absolute !important;
+    top: 6px !important;
+    right: 6px !important;
+    background: #DC143C !important;
+    color: white !important;
+    font-size: 0.625rem !important;
+    font-weight: 700 !important;
+    padding: 2px 5px !important;
+    border-radius: 10px !important;
+    min-width: 18px !important;
+    height: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 2px solid white !important;
+    box-shadow: 0 2px 4px rgba(220, 20, 60, 0.3) !important;
+}
+
+.notification-badge:empty {
+    display: none !important;
+}
+
+/* ========================================
+   USER MENU - PERFECT ALIGNMENT
+   ======================================== */
+
+.user-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.375rem 0.75rem !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    background: transparent !important;
+}
+
+.user-menu:hover {
+    background: #F8F9FA !important;
+}
+
+.user-avatar {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #E1E8ED !important;
+}
+
+.user-name {
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    color: #2C3E50 !important;
+    white-space: nowrap !important;
+}
+
+/* ========================================
+   ACCESSIBILITY TOOLBAR - IMPROVED
+   ======================================== */
+
+.accessibility-toolbar {
+    position: fixed !important;
+    right: 1rem !important;
+    top: 80px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    z-index: 999 !important;
+    background: white !important;
+    padding: 0.5rem !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid #E1E8ED !important;
+}
+
+.accessibility-btn {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    color: #5A6C7D !important;
+}
+
+.accessibility-btn:hover {
+    background: #F8F9FA !important;
+    color: #DC143C !important;
+    transform: scale(1.1) !important;
+}
+
+.accessibility-btn:active,
+.accessibility-btn.active {
+    background: #DC143C !important;
+    color: white !important;
+}
+
+.accessibility-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 1rem !important;
+    }
+
+    .logo-text {
+        font-size: 1.125rem !important;
+    }
+
+    .user-name {
+        display: none !important;
+    }
+
+    .header-right {
+        gap: 0.5rem !important;
+    }
+
+    .accessibility-toolbar {
+        right: 0.5rem !important;
+        top: 70px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        display: none !important;
+    }
+
+    .header-right .icon-btn:not(#notificationBtn) {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS
+   ======================================== */
+
+* {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+button {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+/* ========================================
+   ENSURE ALL BUTTONS WORK
+   ======================================== */
+
+.menu-btn,
+.icon-btn,
+.accessibility-btn,
+.user-menu {
+    pointer-events: auto !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+}

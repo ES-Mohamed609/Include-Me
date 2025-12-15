@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Include Me - Empowerment Platform for People with Disabilities | Powered by Huawei Cloud</title>
+    <meta name="description"
+        content="Include Me is a comprehensive empowerment platform helping individuals with disabilities overcome employment challenges. Powered by Huawei Cloud, we offer intelligent job matching, personalized learning pathways, and community support through partnerships with educational institutions, enterprises, and government bodies.">
+    <meta name="keywords"
+        content="disability employment, accessible jobs, inclusive hiring, job matching, Huawei Cloud, empowerment platform, disability support, career development, assistive technology">
+    <meta name="author" content="Include Me - Empowerment Platform">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixes.css">
+    <link rel="stylesheet" href="sidebar-fix.css">
+    <link rel="stylesheet" href="final-fix.css">
+    <!-- Navbar Complete Fix -->
+    <link rel="stylesheet" href="navbar-fix.css">
+    <!-- Community Support Styles -->
+    <link rel="stylesheet" href="community-styles.css">
+    <!-- Dropdown Styles -->
+    <link rel="stylesheet" href="dropdown-styles.css">
+    <!-- Platform Overview Styles -->
+    <link rel="stylesheet" href="platform-overview-styles.css">
+    <!-- User Menu Styles -->
+    <link rel="stylesheet" href="user-menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar" id="accessibilityToolbar">
+        <button class="accessibility-btn" id="fontSizeBtn" aria-label="Adjust font size" title="Font Size">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M4 4h12v2H4V4zm0 5h12v2H4V9zm0 5h8v2H4v-2z" />
+            </svg>
+        </button>
+        <button class="accessibility-btn" id="contrastBtn" aria-label="Toggle high contrast" title="High Contrast">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14V4a6 6 0 010 12z" />
+            </svg>
+        </button>
+        <button class="accessibility-btn" id="notificationToggle" aria-label="Toggle notifications" title="Job Alerts">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                    d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-left">
+            <div class="logo">
+                <img src="logo.jpg" alt="Include Me Logo" class="logo-img" width="40" height="40"
+                    style="border-radius: 8px;">
+                <div class="logo-text-container">
+                    <span class="logo-text">INCLUDE ME</span>
+                    <span class="logo-tagline">Empowering Abilities</span>
+                </div>
+            </div>
+            <div class="partnership-badge">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style="opacity: 0.6;">
+                    <path
+                        d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                </svg>
+                <span>Powered by Huawei Cloud</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <button class="menu-btn dropdown-toggle" id="menuBtn" data-toggle="dropdown"
+                    aria-label="Toggle navigation menu" aria-expanded="false" data-target="#hamburgerDropdown">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" id="hamburgerDropdown">
+                    <a href="#upload" class="dropdown-item" data-section="upload">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" />
+                        </svg>
+                        CV Upload
+                    </a>
+                    <a href="#jobs" class="dropdown-item" data-section="jobs">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" />
+                            <path
+                                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                        </svg>
+                        Job Board
+                    </a>
+                    <a href="#learning" class="dropdown-item" data-section="learning">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
+                            <path
+                                d="M3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762z" />
+                        </svg>
+                        Learning Center
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#profile" class="dropdown-item" data-section="profile">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                        </svg>
+                        My Profile
+                    </a>
+                    <a href="#community" class="dropdown-item" data-section="community">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                            <path
+                                d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+                        </svg>
+                        Community Support
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#about" class="dropdown-item" data-section="about">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" />
+                        </svg>
+                        About Platform
+                    </a>
+                    <a href="#partners" class="dropdown-item" data-section="partners">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                        </svg>
+                        Our Partners
+                    </a>
+                </div>
+            </div>
+            <button class="icon-btn" id="notificationBtn" aria-label="Notifications">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                        d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                </svg>
+                <span class="notification-badge" id="notificationCount">0</span>
+            </button>
+            <div class="user-menu-container">
+                <button class="user-menu-btn" id="userMenuBtn" aria-label="User menu" aria-expanded="false">
+                    <img src="https://ui-avatars.com/api/?name=User&background=DC143C&color=fff" alt="User avatar"
+                        class="user-avatar" id="userAvatar">
+                    <span class="user-name" id="headerUserName">User</span>
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" class="dropdown-arrow">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                    </svg>
+                </button>
+                <div class="user-dropdown" id="userDropdown">
+                    <div class="user-dropdown-header">
+                        <img src="https://ui-avatars.com/api/?name=User&background=DC143C&color=fff" alt="User avatar"
+                            class="user-avatar-large" id="userAvatarLarge">
+                        <div class="user-info">
+                            <strong id="dropdownUserName">User</strong>
+                            <small id="dropdownUserEmail">user@example.com</small>
+                        </div>
+                    </div>
+                    <div class="user-dropdown-divider"></div>
+                    <a href="#profile" class="user-dropdown-item" data-section="profile">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                        </svg>
+                        <span>My Profile</span>
+                    </a>
+                    <a href="login.html" class="user-dropdown-item" id="logoutBtn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" />
+                        </svg>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Analysis</h3>
+                    <a href="#upload" class="nav-item" data-section="upload">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" />
+                        </svg>
+                        <span>CV Upload</span>
+                    </a>
+                    <a href="#jobs" class="nav-item active" data-section="jobs">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" />
+                            <path
+                                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                        </svg>
+                        <span>Job Board</span>
+                    </a>
+                    <a href="#learning" class="nav-item" data-section="learning">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
+                            <path
+                                d="M3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762z" />
+                        </svg>
+                        <span>Learning Center</span>
+                    </a>
+                    <a href="#saved" class="nav-item" data-section="saved">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                        </svg>
+                        <span>Saved Jobs</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Account</h3>
+                    <a href="#profile" class="nav-item" data-section="profile">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                        </svg>
+                        <span>My Profile</span>
+                    </a>
+                    <a href="#community" class="nav-item" data-section="community">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                            <path
+                                d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+                        </svg>
+                        <span>Community Support</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Platform</h3>
+                    <a href="#about" class="nav-item" data-section="about">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" />
+                        </svg>
+                        <span>About Platform</span>
+                    </a>
+                    <a href="#partners" class="nav-item" data-section="partners">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                        </svg>
+                        <span>Our Partners</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content" id="main-content" role="main">
+
+            <!-- Job Board Section (DEFAULT HOME PAGE) -->
+            <section class="page-section active" id="jobsSection">
+                <div class="section-header">
+                    <h1>Available Jobs</h1>
+                    <p class="section-description">Browse jobs with automatic CV match scoring</p>
+                </div>
+                <div class="job-filters">
+                    <input type="search" id="jobSearch" placeholder="Search jobs..." aria-label="Search jobs">
+                    <select id="matchFilter" aria-label="Filter by match score">
+                        <option value="all">All Matches</option>
+                        <option value="high">High Match (70%+)</option>
+                        <option value="medium">Medium Match (50-69%)</option>
+                        <option value="low">Low Match (<50%)< /option>
+                    </select>
+                </div>
+                <div class="jobs-grid" id="jobsGrid">
+                    <!-- Jobs populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- CV Upload Section -->
+            <section class="page-section" id="uploadSection" style="display: none;">
+                <div class="section-header">
+                    <h1>Your Profile</h1>
+                    <p class="section-description">Upload your CV for AI-powered analysis and job matching</p>
+                </div>
+                <div class="upload-card">
+                    <div class="upload-area" id="uploadArea" role="button" tabindex="0">
+                        <svg class="upload-icon" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="32" fill="url(#uploadGradient)" opacity="0.1" />
+                            <path d="M32 20V44M20 32H44" stroke="url(#uploadGradient)" stroke-width="3"
+                                stroke-linecap="round" />
+                            <defs>
+                                <linearGradient id="uploadGradient" x1="0" y1="0" x2="64" y2="64">
+                                    <stop offset="0%" stop-color="#DC143C" />
+                                    <stop offset="100%" stop-color="#FF4757" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <h2 class="upload-title">Drop your CV here or click to browse</h2>
+                        <p class="upload-subtitle">Supported formats: PDF, DOC, DOCX, TXT (Max 10MB)</p>
+                        <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt" hidden>
+                        <button class="btn-primary" id="browseBtn">Browse Files</button>
+                    </div>
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <div class="file-details">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="8" fill="#DC143C" opacity="0.1" />
+                                <path d="M14 12h8l4 4v12a2 2 0 01-2 2H14a2 2 0 01-2-2V14a2 2 0 012-2z" stroke="#DC143C"
+                                    stroke-width="2" />
+                            </svg>
+                            <div class="file-meta">
+                                <h3 id="fileName">Resume.pdf</h3>
+                                <p id="fileSize">2.4 MB</p>
+                            </div>
+                        </div>
+                        <button class="btn-secondary" id="removeFileBtn">Remove</button>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-primary btn-large" id="analyzeBtn" disabled>Analyze CV</button>
+                </div>
+                <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+                    <div class="loading-content">
+                        <div class="spinner"></div>
+                        <h2>Analyzing Your CV...</h2>
+                        <p>Processing document and extracting insights</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Center Section -->
+            <section class="page-section" id="learningSection" style="display: none;">
+                <div class="section-header">
+                    <h1>Learning Center</h1>
+                    <p class="section-description">Develop skills based on your CV analysis</p>
+                </div>
+                <div class="learning-grid" id="learningGrid">
+                    <!-- Learning resources populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Saved Jobs Section -->
+            <section class="page-section" id="savedSection" style="display: none;">
+                <div class="section-header">
+                    <h1>Saved Jobs</h1>
+                    <p class="section-description">Your bookmarked job opportunities</p>
+                </div>
+                <div class="jobs-grid" id="savedJobsGrid">
+                    <p style="text-align: center; color: var(--text-secondary); padding: 2rem;">
+                        No saved jobs yet. Browse the job board to save positions!
+                    </p>
+                </div>
+            </section>
+
+            <!-- User Profile Section -->
+            <section class="page-section" id="profileSection" style="display: none;">
+                <div class="section-header">
+                    <h1>My Profile</h1>
+                    <button class="btn-primary" id="editProfileBtn">Edit Profile</button>
+                </div>
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+                            </svg>
+                            <h2>Personal Information</h2>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <span class="info-label">Full Name</span>
+                                <span class="info-value" id="profileName">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Age</span>
+                                <span class="info-value" id="profileAge">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Gender</span>
+                                <span class="info-value" id="profileGender">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <h2>Contact Information</h2>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value" id="profileEmail">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value" id="profilePhone">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" />
+                            </svg>
+                            <h2>Disability Information</h2>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <span class="info-label">Type of Disability</span>
+                                <span class="info-value" id="profileDisability">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Accommodations Needed</span>
+                                <span class="info-value" id="profileAccommodations">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Assistive Technology Used</span>
+                                <span class="info-value" id="profileAssistiveTech">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Support Section -->
+            <section class="page-section" id="communitySection" style="display: none;">
+                <div class="section-header">
+                    <h1>Community Support</h1>
+                    <p class="section-description">Connect with others, share experiences, and get support</p>
+                </div>
+
+                <div class="community-grid">
+                    <!-- Discussion Forums -->
+                    <div class="community-card">
+                        <div class="community-card-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor" style="color: #DC143C;">
+                                <path fill-rule="evenodd"
+                                    d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" />
+                            </svg>
+                            <h2>Discussion Forums</h2>
+                        </div>
+                        <p>Join conversations with other job seekers with disabilities</p>
+                        <div class="forum-topics">
+                            <div class="forum-topic">
+                                <span class="topic-icon">💼</span>
+                                <div class="topic-info">
+                                    <strong>Job Search Tips</strong>
+                                    <small>234 discussions • 1.2k members</small>
+                                </div>
+                            </div>
+                            <div class="forum-topic">
+                                <span class="topic-icon">♿</span>
+                                <div class="topic-info">
+                                    <strong>Accessibility in Workplace</strong>
+                                    <small>189 discussions • 890 members</small>
+                                </div>
+                            </div>
+                            <div class="forum-topic">
+                                <span class="topic-icon">🎓</span>
+                                <div class="topic-info">
+                                    <strong>Skills Development</strong>
+                                    <small>156 discussions • 670 members</small>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-primary btn-small">Browse Forums</button>
+                    </div>
+
+                    <!-- Mentorship Program -->
+                    <div class="community-card highlight-card">
+                        <div class="community-card-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor" style="color: #DC143C;">
+                                <path
+                                    d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                            </svg>
+                            <h2>Mentorship Program</h2>
+                        </div>
+                        <p>Get guidance from experienced professionals with disabilities</p>
+                        <div class="mentor-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">150+</div>
+                                <div class="stat-label">Active Mentors</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Success Stories</div>
+                            </div>
+                        </div>
+                        <button class="btn-primary btn-small">Find a Mentor</button>
+                    </div>
+
+                    <!-- Success Stories -->
+                    <div class="community-card">
+                        <div class="community-card-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor" style="color: #DC143C;">
+                                <path fill-rule="evenodd"
+                                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                            </svg>
+                            <h2>Success Stories</h2>
+                        </div>
+                        <p>Read inspiring stories from our community members</p>
+                        <div class="success-stories">
+                            <div class="story-quote">
+                                <p>"Found my dream job as a software developer despite visual impairment"</p>
+                                <small>- Sarah M.</small>
+                            </div>
+                            <div class="story-quote">
+                                <p>"The mentorship program helped me transition to remote work"</p>
+                                <small>- Ahmed K.</small>
+                            </div>
+                        </div>
+                        <button class="btn-secondary btn-small">Read More Stories</button>
+                    </div>
+
+                    <!-- Support Groups -->
+                    <div class="community-card">
+                        <div class="community-card-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor" style="color: #DC143C;">
+                                <path
+                                    d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                            </svg>
+                            <h2>Support Groups</h2>
+                        </div>
+                        <p>Join groups based on your disability type or interests</p>
+                        <div class="support-groups-list">
+                            <div class="group-item">
+                                <span class="group-icon">👁️</span>
+                                <div class="group-info">
+                                    <strong>Visual Impairment Group</strong>
+                                    <small>320 members</small>
+                                </div>
+                            </div>
+                            <div class="group-item">
+                                <span class="group-icon">👂</span>
+                                <div class="group-info">
+                                    <strong>Hearing Impairment Group</strong>
+                                    <small>245 members</small>
+                                </div>
+                            </div>
+                            <div class="group-item">
+                                <span class="group-icon">♿</span>
+                                <div class="group-info">
+                                    <strong>Mobility Support Group</strong>
+                                    <small>410 members</small>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-secondary btn-small">Join a Group</button>
+                    </div>
+
+                    <!-- Live Chat Support -->
+                    <div class="community-card">
+                        <div class="community-card-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor" style="color: #DC143C;">
+                                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                                <path
+                                    d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+                            </svg>
+                            <h2>Live Chat Support</h2>
+                        </div>
+                        <p>Get instant help from community moderators</p>
+                        <div class="chat-status">
+                            <div class="status-indicator">
+                                <span class="status-dot online"></span>
+                                <strong>5 moderators online now</strong>
+                            </div>
+                        </div>
+                        <button class="btn-primary btn-small">Start Chat</button>
+                    </div>
+
+                    <!-- Events & Webinars -->
+                    <div class="community-card">
+                        <div class="community-card-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor" style="color: #DC143C;">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" />
+                            </svg>
+                            <h2>Events & Webinars</h2>
+                        </div>
+                        <p>Attend virtual events and workshops</p>
+                        <div class="upcoming-events">
+                            <div class="event-item">
+                                <div class="event-date">Tomorrow, 3:00 PM</div>
+                                <strong>Resume Writing Workshop</strong>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">Friday, 2:00 PM</div>
+                                <strong>Interview Skills Webinar</strong>
+                            </div>
+                        </div>
+                        <button class="btn-secondary btn-small">View All Events</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Platform Section -->
+            <section class="page-section" id="aboutSection" style="display: none;">
+                <div class="section-header">
+                    <h1>About Include Me</h1>
+                    <p class="section-description">Empowering individuals with disabilities to overcome employment
+                        challenges</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Mission Statement -->
+                    <div class="about-card mission-card">
+                        <div class="about-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
+                            </svg>
+                        </div>
+                        <h2>Our Mission</h2>
+                        <p>Include Me is a comprehensive digital empowerment platform designed to help individuals with
+                            disabilities overcome employment challenges and achieve their career goals. We provide
+                            accessible job search tools, intelligent matching algorithms, personalized learning
+                            pathways, and a supportive community to ensure everyone has equal opportunities in the
+                            workforce.</p>
+                        <div class="mission-stats">
+                            <div class="stat-box">
+                                <div class="stat-value">10,000+</div>
+                                <div class="stat-label">Active Users</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">5,000+</div>
+                                <div class="stat-label">Jobs Matched</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">95%</div>
+                                <div class="stat-label">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technology Stack -->
+                    <div class="about-card tech-card">
+                        <div class="about-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                            </svg>
+                        </div>
+                        <h2>Powered by Huawei Cloud</h2>
+                        <p>Our platform leverages cutting-edge technology to deliver efficient, secure, and accessible
+                            services:</p>
+                        <ul class="tech-list">
+                            <li>
+                                <strong>Huawei Cloud Infrastructure:</strong> Enterprise-grade cloud computing ensuring
+                                99.9% uptime, scalability, and low operational costs
+                            </li>
+                            <li>
+                                <strong>AI-Powered Matching:</strong> Advanced algorithms analyze CVs and job
+                                requirements to provide intelligent job matching with accuracy scores
+                            </li>
+                            <li>
+                                <strong>Accessibility First:</strong> WCAG 2.1 AA compliant design with screen reader
+                                support, keyboard navigation, and customizable display options
+                            </li>
+                            <li>
+                                <strong>Data Security:</strong> End-to-end encryption and compliance with GDPR and data
+                                protection regulations
+                            </li>
+                            <li>
+                                <strong>Real-time Processing:</strong> Instant CV analysis and job matching powered by
+                                cloud computing
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="about-card features-card">
+                        <div class="about-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                            </svg>
+                        </div>
+                        <h2>Platform Features</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">📄</div>
+                                <h3>Intelligent CV Analysis</h3>
+                                <p>AI-powered CV parsing and skill extraction</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🎯</div>
+                                <h3>Smart Job Matching</h3>
+                                <p>Personalized job recommendations with match scores</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📚</div>
+                                <h3>Learning Pathways</h3>
+                                <p>Customized skill development programs</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🤝</div>
+                                <h3>Community Support</h3>
+                                <p>Connect with mentors and peers</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">♿</div>
+                                <h3>Accessibility Tools</h3>
+                                <p>Screen readers, high contrast, font adjustments</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🔒</div>
+                                <h3>Privacy Protection</h3>
+                                <p>Secure data handling and encryption</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Revenue Model -->
+                    <div class="about-card revenue-card">
+                        <div class="about-card-icon">
+                            <svg width="48" height="48" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" />
+                            </svg>
+                        </div>
+                        <h2>Sustainable Business Model</h2>
+                        <p>We ensure platform sustainability through diverse revenue streams while keeping core services
+                            accessible:</p>
+                        <div class="revenue-streams">
+                            <div class="revenue-item">
+                                <div class="revenue-icon">💼</div>
+                                <div class="revenue-content">
+                                    <h3>Enterprise Partnerships</h3>
+                                    <p>Companies pay for premium job postings and access to our talent pool of qualified
+                                        candidates with disabilities</p>
+                                </div>
+                            </div>
+                            <div class="revenue-item">
+                                <div class="revenue-icon">🎓</div>
+                                <div class="revenue-content">
+                                    <h3>Educational Collaborations</h3>
+                                    <p>Customized training programs and certification courses developed with partner
+                                        institutions</p>
+                                </div>
+                            </div>
+                            <div class="revenue-item">
+                                <div class="revenue-icon">🏛️</div>
+                                <div class="revenue-content">
+                                    <h3>Government Grants</h3>
+                                    <p>Funding and subsidies supporting our mission to improve disability employment
+                                        rates</p>
+                                </div>
+                            </div>
+                            <div class="revenue-item">
+                                <div class="revenue-icon">⭐</div>
+                                <div class="revenue-content">
+                                    <h3>Premium Services</h3>
+                                    <p>Optional advanced features like priority support, detailed analytics, and career
+                                        coaching</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cost-efficiency">
+                            <h3>Cost Efficiency Through Huawei Cloud</h3>
+                            <p>By leveraging Huawei Cloud's infrastructure, we achieve up to 40% lower operational costs
+                                compared to traditional hosting, allowing us to offer free core services to all users
+                                while maintaining financial sustainability.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners Section -->
+            <section class="page-section" id="partnersSection" style="display: none;">
+                <div class="section-header">
+                    <h1>Our Partners</h1>
+                    <p class="section-description">Collaborating with leading organizations to create opportunities</p>
+                </div>
+
+                <div class="partners-container">
+                    <!-- Technology Partners -->
+                    <div class="partner-category">
+                        <div class="category-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" />
+                            </svg>
+                            <h2>Technology Partners</h2>
+                        </div>
+                        <div class="partners-grid">
+                            <div class="partner-card featured-partner">
+                                <div class="partner-logo">
+                                    <svg width="64" height="64" viewBox="0 0 20 20" fill="currentColor">
+                                        <path
+                                            d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                    </svg>
+                                </div>
+                                <h3>Huawei Cloud</h3>
+                                <p class="partner-role">Primary Infrastructure Partner</p>
+                                <p>Providing enterprise-grade cloud computing, AI capabilities, and technical support to
+                                    power our platform with reliability and efficiency.</p>
+                                <div class="partner-benefits">
+                                    <span class="benefit-tag">Cloud Infrastructure</span>
+                                    <span class="benefit-tag">AI Services</span>
+                                    <span class="benefit-tag">Technical Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Educational Institutions -->
+                    <div class="partner-category">
+                        <div class="category-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
+                            </svg>
+                            <h2>Educational Institutions</h2>
+                        </div>
+                        <div class="partners-grid">
+                            <div class="partner-card">
+                                <div class="partner-icon">🎓</div>
+                                <h3>Universities & Colleges</h3>
+                                <p>Partnering with leading educational institutions to provide customized learning
+                                    programs and skill development courses.</p>
+                                <ul class="partner-list">
+                                    <li>Accredited certification programs</li>
+                                    <li>Specialized training courses</li>
+                                    <li>Career counseling services</li>
+                                </ul>
+                            </div>
+                            <div class="partner-card">
+                                <div class="partner-icon">💻</div>
+                                <h3>Technical Training Centers</h3>
+                                <p>Collaboration with vocational schools offering hands-on technical skills training in
+                                    high-demand fields.</p>
+                                <ul class="partner-list">
+                                    <li>IT and software development</li>
+                                    <li>Digital marketing</li>
+                                    <li>Data analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Partners -->
+                    <div class="partner-category">
+                        <div class="category-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" />
+                            </svg>
+                            <h2>Enterprise Partners</h2>
+                        </div>
+                        <div class="partners-grid">
+                            <div class="partner-card">
+                                <div class="partner-icon">🏢</div>
+                                <h3>Inclusive Employers</h3>
+                                <p>Forward-thinking companies committed to diversity and inclusion in their hiring
+                                    practices.</p>
+                                <div class="partner-stats">
+                                    <div class="stat-item">
+                                        <strong>200+</strong>
+                                        <span>Partner Companies</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <strong>3,000+</strong>
+                                        <span>Job Openings</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partner-card">
+                                <div class="partner-icon">🤝</div>
+                                <h3>Corporate Social Responsibility</h3>
+                                <p>Organizations supporting our mission through CSR initiatives and workplace
+                                    accessibility programs.</p>
+                                <ul class="partner-list">
+                                    <li>Accessibility consulting</li>
+                                    <li>Mentorship programs</li>
+                                    <li>Internship opportunities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Government Bodies -->
+                    <div class="partner-category">
+                        <div class="category-header">
+                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" />
+                            </svg>
+                            <h2>Government & NGO Partners</h2>
+                        </div>
+                        <div class="partners-grid">
+                            <div class="partner-card">
+                                <div class="partner-icon">🏛️</div>
+                                <h3>Government Agencies</h3>
+                                <p>Collaborating with employment and social welfare departments to improve disability
+                                    employment rates.</p>
+                                <ul class="partner-list">
+                                    <li>Policy development support</li>
+                                    <li>Grant funding programs</li>
+                                    <li>Regulatory compliance</li>
+                                </ul>
+                            </div>
+                            <div class="partner-card">
+                                <div class="partner-icon">🌍</div>
+                                <h3>Non-Profit Organizations</h3>
+                                <p>Working with disability advocacy groups and NGOs to reach and support more
+                                    individuals.</p>
+                                <ul class="partner-list">
+                                    <li>Community outreach</li>
+                                    <li>Awareness campaigns</li>
+                                    <li>Support services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partnership CTA -->
+                    <div class="partnership-cta">
+                        <h2>Become a Partner</h2>
+                        <p>Join us in creating a more inclusive workforce. Whether you're an employer, educational
+                            institution, or organization, we'd love to collaborate.</p>
+                        <button class="btn-primary btn-large">Partner With Us</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="dropdown.js"></script>
+    <script src="dropdown-navigation.js"></script>
+    <script src="init.js"></script>
+    <script src="sidebar-toggle.js"></script>
+    <script src="user-session.js"></script>
+    <script src="user-display.js"></script>
+    <script src="solid-architecture.js"></script>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script src="profile.js"></script>
+</body>
+
+</html>
